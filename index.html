@@ -9,8 +9,6 @@
         <script src="https://unpkg.com/callapp-lib@3.5.0/dist/index.umd.js"></script>
         <script>
             function launch(){
-            const genshin = new Audio('audio\\LAUNCH.mp3')
-            genshin.play()
             const options = {
                 scheme: {
                     protocol: 'yuanshengame',
@@ -25,7 +23,11 @@
                 path: '',
             });
             };
+            function music(){
+                const genshin = new Audio('audio\\LAUNCH.mp3')
+                genshin.play()
+            };
         </script>
-        <button onClick="launch();">启动</button>
+        <button onClick="launch();music();">启动</button>
     </body>
 </html>
