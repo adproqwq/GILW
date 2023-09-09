@@ -12,6 +12,7 @@
             const options = {
                 scheme: {
                     protocol: 'yuanshengame',
+                    fallback: 'https://adproqwq.github.io/GenshinImpactLauncherWEB/'
                 },
                 intent: {
                     package: 'com.miHoYo.Yuanshen',
@@ -23,7 +24,11 @@
                 path: '',
             });
             };
+            function music(){
+                const genshin = new Audio('launch.mp3')
+                genshin.play()
+            };
         </script>
-        <button onClick="launch();">启动</button>
+        <button onClick="launch();music();">启动</button>
     </body>
 </html>
