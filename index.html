@@ -6,19 +6,19 @@
         <title>原神，启动！</title>
     </head>
     <body>
-        <script src="https://unpkg.com/callapp-lib@3.5.0/dist/index.umd.js"></script>
+        <script src="https://unpkg.com/callapp-lib"></script>
         <script>
             function launch(){
             const options = {
                 scheme: {
                     protocol: 'yuanshengame',
-                    fallback: 'https://adproqwq.github.io/GenshinImpactLauncherWEB/',
-                    timeout: 10000,
                 },
                 intent: {
                     package: 'com.miHoYo.Yuanshen',
                     scheme: 'yuanshengame',
                 },
+                fallback: 'https://adproqwq.github.io/GenshinImpactLauncherWEB/',
+                timeout: 10000,
             };
             const callLib = new CallApp(options);
             callLib.open({
